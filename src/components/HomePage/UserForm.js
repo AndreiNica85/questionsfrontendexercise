@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Router from "react-router-dom";
+import React from "react";
+
 
 function UserForm(props) {
   const navigate = useNavigate();
@@ -16,11 +17,14 @@ function UserForm(props) {
   };
 
   const submitHandler = (e) => {
+
     e.preventDefault();
+
     console.log(name, email);
+
     const person = {
       name: name,
-      email: email,
+      email: email
     };
     console.log(person);
 

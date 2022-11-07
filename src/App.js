@@ -1,15 +1,17 @@
 import "./App.css";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
+import UserForm from "./components/HomePage/UserForm";
+import Questions from "./components/Questions/Questions";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Wecome</h1>
-      <h2>Qestionnaire App Class Exercise</h2>
+
       <Routes>
-        <Route path="/questions"></Route>
+        <Route index element={<UserForm/>}/>
+        <Route path="/questions" element={<Questions/>}/>
       </Routes>
-    </div>
+
   );
 }
 
