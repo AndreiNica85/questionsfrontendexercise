@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Question from "./Question";
 import axios from 'axios';
 
 function Questions(){
@@ -29,15 +30,13 @@ useEffect(() => {
 }, []);
 
 
-console.log(questions);
-
-
-
 // When we answer a question (useState()) we save the answer and we go to the next one
 
 // return <Question id={} /> /asdasdasdasd
 
-
+return <div>
+    {questions.map( (element) => { return <Question id={element.id}/> })}
+</div>
 
 
 
